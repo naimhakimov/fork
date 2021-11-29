@@ -1,0 +1,11 @@
+mixin list(values)
+	div.card
+		each val in values
+			.card__item
+				.card__img
+					img.img(src= val.img)
+					img.img-last(src= val.imgLast)
+				div.card__title
+					span= val.title
+					span.card__subtitle= val.subtitle
+				.card__text= val.text

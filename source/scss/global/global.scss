@@ -1,0 +1,31 @@
+// глобальные стили кроме normalize
+
+.container {
+  @include make-container();
+  @include make-container-max-widths();
+}
+
+img {
+  @include img-fluid();
+}
+
+.btn-buy {
+  background: #77B900;
+  height: 56px;
+  width: 100%;
+  border: none;
+  font-family: 'Play', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.25px;
+  color: #FFFFFF;
+
+  &:hover {
+    background: black;
+    border: 2px solid #77B900;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px #77B900;
+  }
+}

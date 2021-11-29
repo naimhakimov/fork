@@ -1,0 +1,70 @@
+@import "../variables";
+
+.header {
+  position: relative;
+  background: $black;
+  color: $white;
+
+  &__content {
+    height: 56px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__burger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 55px;
+    left: 0;
+    height: 91.5vh;
+    width: 100%;
+    background: $black;
+    padding: 16px 0 43px 0;
+  }
+
+  &__social {
+    text-align: center;
+  }
+
+  &__list {
+    text-align: center;
+  }
+
+  &__item {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    color: $white;
+    padding: 14px 0;
+    cursor: pointer;
+  }
+  &__logo {
+    height: 34px;
+    width: 45px;
+  }
+}
+
+@media (min-width: 320px) and (min-width: 480px) {
+  .header {
+    &__menu {
+      position: static;
+    }
+  }
+}
