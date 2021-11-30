@@ -7,9 +7,8 @@ header.header
                 img(src='img/header/logo.png')
             .header__menu.menu-open
                 .header__list
-                    .header__item Продукты
-                    .header__item Технологии
-                    .header__item Experience
+                    each menu in menuList
+                        .header__item= menu
                 .header__social
                     span.open
                         img(src='img/header/hover.svg')

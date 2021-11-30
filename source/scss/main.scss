@@ -19,13 +19,6 @@
 @import "blocks/**/*.scss";
 @import "ui/**/*.scss";
 
-@font-face {
-  font-family: "Play-Bold";
-  src: url("fonts/Play-Bold.ttf") format("ttf"),
-  url("fonts/Play-Bold.ttf") format("ttf");
-}
-
-
 .main-page {
   background-color: $black;
   background-image: url("../img/main/bg.png");
@@ -123,3 +116,104 @@
     color: #E1E1E1;
   }
 }
+
+.modal {
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+
+  &-dialog {
+    min-height: 100%;
+    align-items: center;
+    display: flex;
+    margin: 0 auto;
+  }
+
+  &-content {
+    position: relative;
+    color: $white;
+    background: #000000;
+    border: 2px solid #77B900;
+    box-sizing: border-box;
+    box-shadow: 0 0 20px rgba(119, 185, 0, 0.5);
+    max-width: 100%;
+    width: 540px;
+    padding: 50px 20px 20px 20px;
+    border-radius: 0;
+  }
+
+  .modal-header, .modal-footer, .modal-body {
+    border: none;
+    padding: 0;
+    margin: 0;
+    flex: 0;
+  }
+
+  .modal-footer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn-buy {
+    max-width: 192px;
+  }
+
+  &-form {
+    width: 100%;
+  }
+
+  &-title {
+    font-family: 'Play', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 0.25px;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+  }
+
+  &-input {
+    width: 100%;
+    height: 56px;
+    padding-left: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.3px;
+    color: #000000;
+    border: none;
+    margin-bottom: 20px;
+
+    &::placeholder {
+      color: #000000;;
+    }
+  }
+
+  .close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: url("../img/modal/close.png") no-repeat;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media (min-width: 480px) {
+  .modal {
+    .modal-content {
+      padding: 73px 95px;
+    }
+
+    &-title {
+      font-size: 26px;
+      line-height: 36px;
+    }
+  }
+}
+
