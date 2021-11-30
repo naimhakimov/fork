@@ -22,18 +22,17 @@ $(document).ready(function () {
 
 
   /* header */
-  $('.menu-open').css({'display': 'none'});
 
   $('.burger-icon').click(() => {
     hide = !hide;
     if (!hide) {
-      $('.burger-icon').css({'backgroundColor': 'black'});
-      $('.menu-open').css({'display': 'none'});
-      $('body').css({'overflow': 'visible'});
-    } else {
       $('.burger-icon').css({'backgroundColor': '#77B900'});
-      $('.menu-open').css({'display': 'flex'});
+      $('.menu-open').addClass('active');
       $('body').css({'overflow': 'hidden'});
+    } else {
+      $('.burger-icon').css({'backgroundColor': 'black'});
+      $('.menu-open').removeClass('active');
+      $('body').css({'overflow': 'visible'});
     }
   })
 

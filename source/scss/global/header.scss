@@ -22,9 +22,13 @@
     align-items: center;
   }
 
+  .active {
+    display: flex;
+  }
+
   &__menu {
     position: absolute;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     top: 55px;
@@ -36,7 +40,31 @@
   }
 
   &__social {
-    text-align: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  &__twitter {
+    background: url("../img/header/tw.png") no-repeat;
+    min-width: 48px;
+    min-height: 48px;
+    transition: 0.2s;
+
+    &:hover {
+      background: url("../img/header/hover.svg");
+    }
+  }
+
+  &__instagram {
+    background: url("../img/header/inst.svg") no-repeat;
+    min-width: 48px;
+    min-height: 48px;
+    transition: 0.2s;
+
+    &:hover {
+      background: url("../img/header/inst-hover.png");
+    }
   }
 
   &__list {
@@ -55,8 +83,54 @@
     padding: 14px 0;
     cursor: pointer;
   }
+
   &__logo {
     height: 34px;
     width: 45px;
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+
+    &__content {
+      height: 90px;
+    }
+
+    .active {
+      display: flex;
+    }
+
+    &__menu {
+      position: static;
+      display: flex;
+      flex-direction: row;
+      top: 0;
+      height: 100%;
+      padding: 0 0 0 14px;
+
+    }
+
+    &__list {
+      display: flex;
+    }
+
+    &__item {
+      padding: 31px 24px;
+    }
+
+    &__social {
+      display: flex;
+      align-items: center;
+    }
+
+    &__burger {
+      display: none;
+    }
+
+    &__logo {
+      height: 60px;
+      width: 81px;
+    }
   }
 }
