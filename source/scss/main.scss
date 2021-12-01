@@ -7,7 +7,7 @@
 
 /*Bootrap4 imports*/
 @import "config";
-@import "fonts/*.scss";
+@import "dist/fonts/*.scss";
 @import "mixins";
 @import "functions";
 @import "variables";
@@ -18,7 +18,7 @@
 @import "global/**/*.scss";
 @import "blocks/**/*.scss";
 @import "ui/**/*.scss";
-
+@import "fonts/fonts";
 .page-wrapper {
   height: 100vh;
   display: flex;

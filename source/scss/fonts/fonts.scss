@@ -1,6 +1,21 @@
-//check fonts on https://fonts.google.com/ first
 @font-face {
-  font-family: "Play-Bold";
-  src: url("./Play-Bold.ttf") format("ttf"),
-  url("./Play-Bold.ttf") format("ttf");
+  font-family: 'Play-Bold';
+  src: local('Play Regular'),
+  local('Play-Regular'),
+  url('../fonts/playbold.woff2')
+  format('woff2'), url('../fonts/playbold.woff')
+  format('woff'), url('../fonts/playbold.ttf')
+  format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Play';
+  src: local('Play Regular'),
+  local('Play-Regular'),
+  url('../fonts/playregular.woff2') format('woff2'), url('../fonts/playregular.woff')
+  format('woff'), url('../fonts/playregular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
 }
